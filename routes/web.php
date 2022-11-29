@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','FrontEndController@homePage')->name('home');
-
-Route::get('about-us','FrontEndController@aboutUs')->name('about');
-
-Route::get('contact-us','FrontEndController@contactUs')->name('contact');
-
+Route::get('/', function () {
+    return view('welcome');
+});
